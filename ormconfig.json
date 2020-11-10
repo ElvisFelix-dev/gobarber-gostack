@@ -8,10 +8,11 @@
   "entities": [
     "./src/modules/*.ts"
   ],
-  "migration": [
+  "migrations": [
     "./src/database/migrations/*.ts"
   ],
   "cli": {
     "migrationsDir": "./src/database/migrations"
   }
 }
+
