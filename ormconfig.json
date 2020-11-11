@@ -6,7 +6,7 @@
   "password": "docker",
   "database": "postgres_gobarber",
   "entities": [
-    "./src/modules/*.ts"
+    "./src/models/*.ts"
   ],
   "migrations": [
     "./src/database/migrations/*.ts"
