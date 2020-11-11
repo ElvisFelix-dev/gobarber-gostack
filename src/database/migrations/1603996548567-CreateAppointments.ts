@@ -25,7 +25,7 @@ export default class CreateAppointments1603978789762
             isNullable: false,
           },
           {
-            name: 'create_at',
+            name: 'created_at',
             type: 'timestamp',
             default: 'now()',
           },
