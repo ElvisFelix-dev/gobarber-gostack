@@ -11,7 +11,8 @@ import AppointmentsRepository from '../repositories/AppointmentsRepository';
  */
 
 interface Request {
-  provider: string;
+  // eslint-disable-next-line camelcase
+  provider_id: string;
   date: Date;
 }
 
@@ -20,7 +21,8 @@ interface Request {
 // Single Responsability Principle
 
 class CreateAppointmentService {
-  public async execute({ date, provider }: Request): Promise<Appointment> {
+  // eslint-disable-next-line camelcase
+  public async execute({ date, provider_id }: Request): Promise<Appointment> {
     const appointmentsRepository = getCustomRepository(AppointmentsRepository);
 
     const appointmentDate = startOfHour(date);
@@ -34,7 +36,7 @@ class CreateAppointmentService {
     }
 
     const appointment = appointmentsRepository.create({
-      provider,
+      provider_id,
       date: appointmentDate,
     });
 
